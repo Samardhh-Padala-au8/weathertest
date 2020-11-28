@@ -29,7 +29,7 @@ class Weather extends Component {
             return time
         }
 
-        const res = await axios(`http://api.openweathermap.org/data/2.5/weather?q=Mumbai&units=metric&APPID=273de4cdf402354277d9a5313c3101cc`)
+        const res = await axios(`https://api.openweathermap.org/data/2.5/weather?q=Mumbai&units=metric&APPID=273de4cdf402354277d9a5313c3101cc`)
         console.log(res)
         const weather = res.data;
         this.setState({ weather })
@@ -53,7 +53,7 @@ class Weather extends Component {
             return time
         }
         if (prevState.pcity !== this.state.pcity) {
-            const res = await axios(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.pcity}&units=metric&APPID=273de4cdf402354277d9a5313c3101cc`)
+            const res = await axios(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.pcity}&units=metric&APPID=273de4cdf402354277d9a5313c3101cc`)
             console.log(res)
             const weather = res.data;
             this.setState({ weather })
